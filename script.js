@@ -5,7 +5,20 @@ const keys = document.querySelectorAll('.key')
 const whiteKeys = document.querySelectorAll('.key.white')
 const blackKeys = document.querySelectorAll('.key.black')
 
+document.getElementById('theme1').addEventListener('click', function (){
+    document.body.classList.add('theme1')
+    document.body.classList.remove('theme2','theme3')
+})
 
+document.getElementById('theme2').addEventListener('click', function (){
+    document.body.classList.add('theme2')
+    document.body.classList.remove('theme1','theme3')
+})
+
+document.getElementById('theme3').addEventListener('click', function (){
+    document.body.classList.add('theme3')
+    document.body.classList.remove('theme1','theme2')
+})
 
 keys.forEach( key => {
     key.addEventListener('click', ()=> playNote(key))

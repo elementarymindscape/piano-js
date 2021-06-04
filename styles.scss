@@ -2,29 +2,144 @@ $theme1WhiteKey: #fff;
 $theme1BlackKey: #000;
 $theme1Border: #000;
 
-$theme2WhiteKey: #03fce8;
-$theme2BlackKey: #004f4b;
-$theme2Border: #004f4b;
+$theme2WhiteKey: #0097a6;
+$theme2BlackKey: #003f45;
+$theme2Border: #003f45;
 
-$theme3WhiteKey: #ff52f9;
-$theme3BlackKey: #a1007e;
-$theme3Border: #a1007e;
+$theme3WhiteKey: #e00b48;
+$theme3BlackKey: #660000;
+$theme3Border: #660000;
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body{
-    background: rgb(68,155,252);
-    background: linear-gradient(259deg, rgba(68,155,252,1) 13%, rgba(1,222,149,1) 30%, rgba(1,222,149,1) 70%, rgba(68,155,252,1) 87%);
+    background: rgb(68,252,163);
+    background: linear-gradient(90deg, rgba(68,252,163,1) 10%, rgba(1,222,216,1) 40%, rgba(1,222,216,1) 60%, rgba(69,252,160,1) 90%);
     min-height: 100vh;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &.theme1{
+        background: rgb(68,252,163);
+        background: linear-gradient(90deg, rgba(68,252,163,1) 10%, rgba(1,222,216,1) 40%, rgba(1,222,216,1) 60%, rgba(69,252,160,1) 90%);
+        .heading h1{
+            color: #d40000;
+            font-family: 'Rubik Mono One';
+            font-size: 50px;
+        }
+        .piano{
+            display: flex;
+        }
+        .key{
+            height: calc(var(--width)*4);
+            width: var(--width);
+        }
+
+        .white{
+            --width: 100px;
+            background-color: $theme1WhiteKey;
+            border: 1px solid $theme1Border;
+        }
+
+        .white.active{
+            background-color: #d4d4d4;
+        }
+
+        .black{
+            --width: 60px;
+            margin-left: calc(var(--width) / -2 );
+            margin-right: calc(var(--width) / -2 );
+            z-index: 2;
+            background-color: $theme1BlackKey;
+        }
+
+        .black.active{
+            background-color: #333;
+        }
+    }
+
+    &.theme2{
+        background: rgb(68,155,252);
+        background: linear-gradient(259deg, rgba(68,155,252,1) 13%, rgba(1,222,149,1) 30%, rgba(1,222,149,1) 70%, rgba(68,155,252,1) 87%);
+        .heading h1{
+            color: #10018f;
+        }
+        .piano{
+            display: flex;
+        }
+        .key{
+            height: calc(var(--width)*4);
+            width: var(--width);
+        }
+        .white{
+            --width: 100px;
+            background-color: $theme2WhiteKey;
+            border: 1px solid $theme2Border;
+        }
+
+        .white.active{
+            background-color: #3cb6c2;
+        }
+
+        .black{
+            --width: 60px;
+            margin-left: calc(var(--width) / -2 );
+            margin-right: calc(var(--width) / -2 );
+            z-index: 2;
+            background-color: $theme2BlackKey;
+        }
+        .black.active{
+            background-color: #64e9f5;
+        }
+    }
+    
+
+    &.theme3{
+        background: rgb(252,68,189);
+        background: linear-gradient(207deg, rgba(252,68,189,1) 13%, rgba(1,162,222,1) 30%, rgba(1,162,222,1) 70%, rgba(252,68,189,1) 87%);
+        .heading h1{
+            color: #eb5600;
+        }
+        .piano{
+            display: flex;
+        }
+
+        .key{
+            height: calc(var(--width)*4);
+            width: var(--width);
+        }
+        .white{
+            --width: 100px;
+            background-color: $theme3WhiteKey;
+            border: 1px solid $theme3Border;
+        }
+        .white.active{
+            background-color: #e06063;
+        }
+        .black{
+            --width: 60px;
+            margin-left: calc(var(--width) / -2 );
+            margin-right: calc(var(--width) / -2 );
+            z-index: 2;
+            background-color: $theme3BlackKey;
+        }
+        .black.active{
+            background-color: #b53134;
+        }
+    }
+
 }
 
+    h2{
+        font-size: 26px;
+        font-family: 'Rubik Mono One';
+        font-weight: 50;
+    }
     .heading h1{
         color: #d40000;
         font-family: 'Rubik Mono One';
@@ -34,42 +149,50 @@ body{
     .footer{
         word-spacing: 5px;
     }
-.piano{
-    display: flex;
-}
 
-.key{
-    height: calc(var(--width)*4);
-    width: var(--width);
-}
-
-.white{
-    --width: 100px;
-    background-color: $theme1WhiteKey ;
-    border: 1px solid $theme1Border;
-}
-
-    .white.active{
-        background-color: #d5dbe3;
+    .piano{
+        display: flex;
+    }
+    .key{
+        height: calc(var(--width)*4);
+        width: var(--width);
     }
 
-.black{
-    --width: 60px;
-    background-color: $theme1BlackKey;
-    margin-left: calc(var(--width) / -2 );
-    margin-right: calc(var(--width) / -2 );
-    z-index: 2;
-}
+    .white{
+        --width: 100px;
+        background-color: $theme1WhiteKey;
+        border: 1px solid $theme1Border;
+    }
 
-.black.active{
-    background-color: #333;
-}
+    .white.active{
+        background-color: #d4d4d4;
+    }
+
+    .black{
+        --width: 60px;
+        margin-left: calc(var(--width) / -2 );
+        margin-right: calc(var(--width) / -2 );
+        z-index: 2;
+        background-color: $theme1BlackKey;
+    }
+
+    .black.active{
+        background-color: #333;
+    }
 
 .btn{
     width: 50px;
     height: 50px;
     border-radius:50% ;
-    border: 0;
     outline: none;
+    border: 1px solid #000;
     margin-right: 2px;
+}
+
+.btn:nth-child(3){
+    background-color: $theme2WhiteKey   ;
+}
+
+.btn:nth-child(4){
+    background-color: $theme3WhiteKey;
 }
