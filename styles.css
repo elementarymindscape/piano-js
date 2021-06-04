@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #5603fc ;
+    margin: 0;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano{
+    display: flex;
+}
+
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+}
+
+.white{
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+.black{
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2 );
+    margin-right: calc(var(--width) / -2 );
+    z-index: 2;
+}
