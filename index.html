@@ -4,30 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Piano</title>
+    <title>PIANO</title>
 </head>
 <body>
+    <div class="heading">
+        <h1> PIANO </h1>
+    </div>
     <div class="piano">
-        <div  data-note="C" class="key white"></div>
-        <div  data-note="Db" class="key black"></div>
-        <div  data-note="D" class="key white"></div>
-        <div  data-note="Eb" class="key black"></div>
-        <div  data-note="E" class="key white"></div>
-        <div  data-note="F" class="key white"></div>
-        <div  data-note="Gb" class="key black"></div>
-        <div  data-note="G" class="key white"></div>
-        <div  data-note="Ab" class="key black"></div>
-        <div  data-note="A" class="key white"></div>
-        <div  data-note="Bb" class="key black"></div>
-        <div  data-note="B" class="key white"></div>
+        <div data-note="C" class="key white"></div>
+        <div data-note="Db" class="key black"></div>
+        <div data-note="D" class="key white"></div>
+        <div data-note="Eb" class="key black"></div>
+        <div data-note="E" class="key white"></div>
+        <div data-note="F" class="key white"></div>
+        <div data-note="Gb" class="key black"></div>
+        <div data-note="G" class="key white"></div>
+        <div data-note="Ab" class="key black"></div>
+        <div data-note="A" class="key white"></div>
+        <div data-note="Bb" class="key black"></div>
+        <div data-note="B" class="key white"></div>
+    </div>
+    <!-- //FOR USER HELP -->
+    <div class="footer">
+        <p> Keyboard Keys For White Piano Keys: S, D, F, G, H, J, K </p>
+        <p> Keyboard Keys For Black Piano Keys: E, R, T, Y, U </p>
+    </div>
+    <!-- //COLOR CHANGE BUTTONS -->
+    <div>
+        <h2 align='center'> Color Changer </h2>
+        <button class="btn" id="theme1" ></button>
+        <button class="btn" id="theme2" ></button>
+        <button class="btn" id="theme3" ></button>
     </div>
     <audio id="C"  src="notes/C.mp3"></audio>
     <audio id="Db" src="notes/Db.mp3"></audio>
     <audio id="D"  src="notes/D.mp3"></audio>
-    <audio id="Eb"  src="notes/Eb.mp3"></audio>
-    <audio id="E" src="notes/E.mp3"></audio>
+    <audio id="Eb" src="notes/Eb.mp3"></audio>
+    <audio id="E"  src="notes/E.mp3"></audio>
     <audio id="F"  src="notes/F.mp3"></audio>
     <audio id="Gb" src="notes/Gb.mp3"></audio>
     <audio id="G"  src="notes/G.mp3"></audio>

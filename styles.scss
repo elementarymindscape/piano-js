@@ -1,0 +1,75 @@
+$theme1WhiteKey: #fff;
+$theme1BlackKey: #000;
+$theme1Border: #000;
+
+$theme2WhiteKey: #03fce8;
+$theme2BlackKey: #004f4b;
+$theme2Border: #004f4b;
+
+$theme3WhiteKey: #ff52f9;
+$theme3BlackKey: #a1007e;
+$theme3Border: #a1007e;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(68,155,252);
+    background: linear-gradient(259deg, rgba(68,155,252,1) 13%, rgba(1,222,149,1) 30%, rgba(1,222,149,1) 70%, rgba(68,155,252,1) 87%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .heading h1{
+        color: #d40000;
+        font-family: 'Rubik Mono One';
+        font-size: 50px;
+    }
+
+    .footer{
+        word-spacing: 5px;
+    }
+.piano{
+    display: flex;
+}
+
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+}
+
+.white{
+    --width: 100px;
+    background-color: $theme1WhiteKey ;
+    border: 1px solid $theme1Border;
+}
+
+    .white.active{
+        background-color: #d5dbe3;
+    }
+
+.black{
+    --width: 60px;
+    background-color: $theme1BlackKey;
+    margin-left: calc(var(--width) / -2 );
+    margin-right: calc(var(--width) / -2 );
+    z-index: 2;
+}
+
+.black.active{
+    background-color: #333;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+    border: 0;
+    outline: none;
+    margin-right: 2px;
+}

@@ -1,5 +1,5 @@
 const WHITE_KEYS = ['s', 'd', 'f', 'g', 'h', 'j', 'k']
-const BLACK_KEYS = ['e', 'r', 't', 'y', 'u', 'i']
+const BLACK_KEYS = ['e', 'r', 't', 'y', 'u']
 
 const keys = document.querySelectorAll('.key')
 const whiteKeys = document.querySelectorAll('.key.white')
