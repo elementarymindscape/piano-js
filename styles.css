@@ -70,8 +70,8 @@ body.theme1 .black.active {
 }
 
 body.theme2 {
-  background: #449bfc;
-  background: linear-gradient(259deg, #449bfc 13%, #01de95 30%, #01de95 70%, #449bfc 87%);
+  background: rgb(252,70,107);
+  background: radial-gradient(circle, rgba(252,70,107,1) 0%, rgba(99,251,63,1) 100%); 
 }
 
 body.theme2 .heading h1 {
@@ -112,8 +112,8 @@ body.theme2 .black.active {
 }
 
 body.theme3 {
-  background: #fc44bd;
-  background: linear-gradient(207deg, #fc44bd 13%, #01a2de 30%, #01a2de 70%, #fc44bd 87%);
+  background: rgb(195,117,34);
+  background: linear-gradient(0deg, rgba(195,117,34,1) 11%, rgba(46,253,45,1) 95%);
 }
 
 body.theme3 .heading h1 {
@@ -162,10 +162,11 @@ h2 {
 .heading h1 {
   color: #d40000;
   font-family: 'Rubik Mono One';
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .footer {
+  text-align: center;
   word-spacing: 5px;
 }
 
@@ -218,4 +219,173 @@ h2 {
 .btn:nth-child(4) {
   background-color: #e00b48;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+
+  body {
+    background: #44fca3;
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #44fca3), color-stop(40%, #01ded8), color-stop(60%, #01ded8), color-stop(90%, #45fca0));
+    background: linear-gradient(90deg, #44fca3 10%, #01ded8 40%, #01ded8 60%, #45fca0 90%);
+  }
+
+  .heading h1{
+    font-size: 30px;
+  }
+
+  body .piano {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  body .key {
+    height: calc(var(--width)*4);
+    width: var(--width);
+  }
+  
+  body .white {
+    --width: 50px;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  
+  body .white.active {
+    background-color: #d4d4d4;
+  }
+  
+  body .black {
+    --width: 30px;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    background-color: #000;
+  }
+  
+  body .black.active {
+    background-color: #333;
+  }
+  
+
+
+  body.theme1 .heading h1{
+    font-size: 30px;
+  }
+  body.theme1 .key {
+    height: calc(var(--width)*4);
+    width: var(--width);
+  }
+  
+  body.theme1 .white {
+    --width: 45px;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  
+  body.theme1 .white.active {
+    background-color: #d4d4d4;
+  }
+  
+  body.theme1 .black {
+    --width: 30px;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    background-color: #000;
+  }
+  
+  body.theme1 .black.active {
+    background-color: #333;
+  }
+  
+
+  body.theme2 .heading h1{
+    font-size: 30px;
+  }
+body.theme2 {
+  background: rgb(252,70,107);
+  background: radial-gradient(circle, rgba(252,70,107,1) 0%, rgba(99,251,63,1) 100%);
+}
+
+body.theme2 .heading h1 {
+  color: #10018f;
+}
+
+body.theme2 .piano {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.theme2 .key {
+  height: calc(var(--width)*4);
+  width: var(--width);
+}
+
+body.theme2 .white {
+  --width: 45px;
+  background-color: #0097a6;
+  border: 1px solid #003f45;
+}
+
+body.theme2 .white.active {
+  background-color: #3cb6c2;
+}
+
+body.theme2 .black {
+  --width: 30px;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+  background-color: #003f45;
+}
+
+body.theme2 .black.active {
+  background-color: #64e9f5;
+}
+
+body.theme3 {
+  background: rgb(195,117,34);
+  background: linear-gradient(0deg, rgba(195,117,34,1) 11%, rgba(46,253,45,1) 95%);
+}
+
+  body.theme3 .heading h1{
+    font-size: 30px;
+  }
+  body.theme3 .piano {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  body.theme3 .key {
+    height: calc(var(--width)*4);
+    width: var(--width);
+  }
+  
+  body.theme3 .white {
+    --width: 45px;
+    background-color: #e00b48;
+    border: 1px solid #660000;
+  }
+  
+  body.theme3 .white.active {
+    background-color: #e06063;
+  }
+  
+  body.theme3 .black {
+    --width: 30px;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    background-color: #660000;
+  }
+  
+  body.theme3 .black.active {
+    background-color: #b53134;
+  }
+  .footer{
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
